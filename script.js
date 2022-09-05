@@ -12,15 +12,19 @@ const computerChoice = options[Math.floor(Math.random()*options.length)];
 console.log(`Computer chose ${computerChoice}, you chose ${playerChoice}`)
 
 //Decide who won
-if(computerChoice === playerChoice){
-  console.log("It's a draw!")
-} else if (computerChoice === "rock" && playerChoice === "scissors") {
-  console.log("Computer won!")
-} else if (computerChoice === "paper" && playerChoice === "rock") {
-  console.log("Computer won!")
-} else if (computerChoice === "scissors" && playerChoice === "paper") {
-  console.log("Computer won!")
-} else {
-  console.log("You won!")
+function result(computerChoice, playerChoice) {
+  if(computerChoice === playerChoice){
+    return("It's a draw!")
+  } else if (computerChoice === "rock" && playerChoice === "scissors") {
+    return("Computer won!")
+  } else if (computerChoice === "paper" && playerChoice === "rock") {
+    return("Computer won!")
+  } else if (computerChoice === "scissors" && playerChoice === "paper") {
+    return("Computer won!")
+  } else {
+    return("You won!")
+  }
 }
+
+alert(result(computerChoice,playerChoice))
 
